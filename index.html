@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/fragosodev.png"
+    />
+    <title>Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="contenedor" id="contenedor">
+      <nav class="nav container">
+        <img src="./images/fragosodev.png" class="nav__img" />
+
+        <div class="nav__hamburguer"></div>
+
+        <div class="nav__overlay">
+          <ul class="nav__menu">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Inicio</a>
+            </li>
+
+            <li class="nav__item">
+              <span class="nav__parent"
+                >Créditos Fuentes
+                <img src="./images/icon-arrow-down.svg" class="nav__arrow" />
+              </span>
+
+              <ul class="nav__inner">
+                <li class="nav__dropdown">
+                  <a
+                    href="https://www.youtube.com/watch?v=PRywwDEq8qU&t=111s"
+                    class="nav__link"
+                    target="_blank"
+                    >AlexCG Design</a
+                  >
+                </li>
+
+                <li class="nav__dropdown">
+                  <a
+                    href="https://www.youtube.com/watch?v=v5TCP1cnSQA&t=57s"
+                    class="nav__link"
+                    target="_blank"
+                    >CapiDev</a
+                  >
+                </li>
+
+                <li class="nav__dropdown">
+                  <a
+                    href="https://www.youtube.com/shorts/LOSCrYq0ZB4"
+                    class="nav__link"
+                    target="_blank"
+                    >EasyLearnAxis</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" onclick="mostrarModalAcerca()" class="nav__link"
+                >Acerca de</a
+              >
+            </li>
+
+            <li class="nav__item">
+              <a href="#" onclick="mostrarModalContacto()" class="nav__link"
+                >Contacto</a
+              >
+            </li>
+
+            <li class="nav__login">
+              <a href="#" class="nav__sign">Login</a>
+            </li>
+
+            <li class="nav__login nav__login--border">
+              <a href="#" class="nav__sign">Register</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="main">
+        <div class="universo">
+          <section class="main__grid">
+            <div class="sistema-solar">
+              <div class="sun"></div>
+              <div class="earth">
+                <div class="moon"></div>
+              </div>
+            </div>
+
+            <article class="main__article">
+              <div class="main__texts">
+                <h1 class="main__title">El Sol, la Luna y la Tierra:</h1>
+                <p class="main__paragraph">
+                  ¡Descubre el ballet cósmico de nuestro hogar y su satélite
+                  natural en órbita al sol! Sumérgete en un fascinante viaje a
+                  través del vasto universo, desvelando maravillas y misterios
+                  sin precedentes. ¡Embárcate en esta aventura celestial y
+                  maravíllate con la belleza del cosmos!
+                </p>
+                <button class="seguir-viendo-btn" onclick="mostrarModal()">
+                  Seguir viendo
+                </button>
+              </div>
+
+              <!-- Modal para el botón -->
+              <div id="modal" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="cerrarModal()">&times;</span>
+                  <h2>El Sol, la Luna y la Tierra</h2>
+                  <hr />
+                  <div class="modal-media">
+                    <div class="responsive-iframe">
+                      <iframe
+                        width="370"
+                        height="225"
+                        src="https://www.youtube.com/embed/LM0_oBqiZYk"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                  <div class="modal-text">
+                    <p>
+                      La Tierra, el Sol y la Luna son componentes fundamentales
+                      de nuestro sistema solar. Cada uno de ellos desempeña un
+                      papel único y fascinante en el funcionamiento del
+                      universo.
+                    </p>
+                    <p>
+                      El sistema Tierra-Sol-Luna es un ballet cósmico en
+                      constante movimiento. La Tierra orbita alrededor del Sol
+                      en aproximadamente 365 días, mientras que la Luna orbita
+                      alrededor de la Tierra en aproximadamente 27 días. Estas
+                      interacciones gravitacionales entre los tres cuerpos
+                      celestes generan fenómenos como los eclipses solares y
+                      lunares.
+                    </p>
+                    <p>
+                      El estudio de la Tierra, el Sol y la Luna ha sido clave
+                      para expandir nuestro conocimiento sobre el universo y
+                      comprender mejor nuestro lugar en él. La exploración
+                      espacial y las misiones científicas continúan revelando
+                      nuevos descubrimientos y desafíos, inspirando a las
+                      generaciones futuras a seguir explorando y protegiendo
+                      nuestro precioso planeta y el vasto universo que lo rodea.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal para el contacto -->
+              <div id="modal-contacto" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="cerrarModalContacto()"
+                    >&times;</span
+                  >
+                  <h2>Contacto</h2>
+                  <hr class="styled-hr" />
+                  <div class="modal-text">
+                    <div class="contact-item">
+                      <h3>GitHub:</h3>
+                      <a href="https://github.com/davidfragoso" target="_blank"
+                        >https://github.com/davidfragoso</a
+                      >
+                    </div>
+                    <div class="contact-item">
+                      <h3>LinkedIn:</h3>
+                      <a
+                        href="https://www.linkedin.com/in/david-fragoso-84a704233/"
+                        target="_blank"
+                        >https://www.linkedin.com/in/david-fragoso-84a704233/</a
+                      >
+                    </div>
+                    <div class="contact-item">
+                      <h3>Teléfono:</h3>
+                      <p>+52 9983 849 659</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal para el Acerca de -->
+              <div id="modal-acerca" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="cerrarModalAcerca()"
+                    >&times;</span
+                  >
+                  <h2>Acerca de</h2>
+                  <hr />
+
+                  <div class="modal-media">
+                    <div class="profile-picture">
+                      <img
+                        src="../images/mi-foto.jpg"
+                        alt="Mi foto de perfil"
+                      />
+                    </div>
+                  </div>
+                  <div class="modal-text">
+                    <h3>¿Quién soy?</h3>
+                    <p>
+                      Soy <span class="typed"></span>, un estudiante
+                      universitario apasionado de la tecnología y el desarrollo
+                      web. Desde muy joven descubrí mi interés por la
+                      programación y decidí convertirlo en mi carrera
+                      profesional.
+                    </p>
+                    <p>
+                      A lo largo de los años, he adquirido conocimientos en
+                      diferentes lenguajes de programación y tecnologías web.
+                    </p>
+                    <p>
+                      Mi enfoque principal se centra en el desarrollo frontend,
+                      creando interfaces atractivas y funcionales que brinden
+                      una excelente experiencia de usuario. Me apasiona combinar
+                      el diseño visual con la programación para lograr
+                      resultados impactantes.
+                    </p>
+                    <p>
+                      Siempre estoy buscando nuevos desafíos y oportunidades
+                      para expandir mis habilidades. Me encanta mantenerme
+                      actualizado con las últimas tendencias y tecnologías
+                      emergentes en el campo del desarrollo web.
+                    </p>
+                    <p>
+                      Mi objetivo es crear soluciones web innovadoras y de alta
+                      calidad que cumplan con las necesidades y expectativas de
+                      mis clientes. Estoy comprometido con la excelencia en mi
+                      trabajo y me esfuerzo por lograr la satisfacción total de
+                      quienes confían en mis servicios.
+                    </p>
+                    <hr class="styled-hr" />
+
+                    <h3>Proyecto</h3>
+                    <p>
+                      El diseño de este proyecto está en base a las siguientes
+                      fuentes:
+                    </p>
+
+                    <div class="modal-references">
+                      <ul>
+                        <li>
+                          Autor: CapiDev | Fuente:
+                          <a
+                            href="https://www.youtube.com/watch?v=v5TCP1cnSQA&t=57s"
+                            >https://www.youtube.com/watch?v=v5TCP1cnSQA&t=57s</a
+                          >
+                        </li>
+                        <hr class="styled-hr" />
+                        <li>
+                          Autor: easylearnaxis | Fuente:
+                          <a href="https://www.youtube.com/shorts/LOSCrYq0ZB4"
+                            >https://www.youtube.com/shorts/LOSCrYq0ZB4</a
+                          >
+                        </li>
+                        <hr class="styled-hr" />
+                        <li>
+                          Autor: AlexCG Design | Fuente:
+                          <a
+                            href="https://www.youtube.com/watch?v=PRywwDEq8qU&t=111s"
+                            >https://www.youtube.com/watch?v=PRywwDEq8qU&t=111s</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3>En colaboración con</h3>
+              <div class="main__brands">
+                <img src="./images/nasa_logo.png" class="main__brand" />
+                <img src="./images/spacex_logo.png" class="main__brand" />
+                <img src="./images/zero2infinity.png" class="main__brand" />
+                <img src="./images/boeing.png" class="main__brand" />
+              </div>
+            </article>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2023 Fragoso. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+    </div>
+    <div id="spinner"></div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>
