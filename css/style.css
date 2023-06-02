@@ -22,17 +22,17 @@ a {
   text-decoration: none;
   font-size: 16px;
 }
-h2{
+h2 {
   margin-top: 10px;
   color: #fff;
   text-align: center;
 }
-h3{
+h3 {
   margin: 20px 0 10px;
   color: #fff;
 }
 a:hover {
-    color: #eed707;
+  color: #eed707;
 }
 span:hover {
   color: #eed707;
@@ -42,8 +42,7 @@ span:hover {
   display: none;
 }
 
-
- .nombre {
+.nombre {
   font-weight: bold;
   color: #2a9ad7;
   font-style: normal;
@@ -95,7 +94,6 @@ hr {
   pointer-events: none;
   transition: 0.2s opacity;
   z-index: 1;
-
 }
 
 .nav__overlay--show {
@@ -160,6 +158,18 @@ hr {
   color: #fff;
 }
 
+.nav__user {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav__logout {
+  border-radius: 1em;
+  margin-top: 20px;
+  border: 1px solid var(--medium-gray);
+}
+
 .nav__login {
   width: 90%;
   margin: 0 auto;
@@ -178,7 +188,6 @@ hr {
   padding: 0.7em 0;
   text-decoration: none;
 }
-
 /* Main */
 
 .universo {
@@ -280,7 +289,6 @@ hr {
     transform: rotate(360deg);
   }
 }
-
 
 .main__grid {
   height: 80vh;
@@ -411,6 +419,16 @@ hr {
     padding: 0 1.5em;
   }
 
+  .nav__logout {
+    margin: 0;
+    padding: 0 1.5em;
+  }
+  .nav__user{
+    width: max-content;
+    margin: 0;
+    margin-left: auto;
+  }
+
   .main__grid {
     margin: 0 auto;
     max-width: 1200px;
@@ -453,7 +471,6 @@ hr {
   }
 }
 
-
 .seguir-viendo-btn {
   background-color: #fff;
   color: #000;
@@ -470,6 +487,7 @@ hr {
   background-color: #eed707;
 }
 .modal {
+  transition: 0.2s opacity;
   display: none;
   position: fixed;
   z-index: 3;
@@ -527,11 +545,11 @@ hr {
   margin: 10% auto;
   border: 1px solid #888;
 }
-.modal-references ul{
- height: auto;
- align-content: center;
- justify-content: center;
- overflow: auto;
+.modal-references ul {
+  height: auto;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
 }
 .close {
   color: #aaa;
@@ -555,6 +573,54 @@ hr {
   margin-bottom: 15px;
 }
 
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #eed707;
+}
 .responsive-iframe {
   position: relative;
   width: 100%;
@@ -585,7 +651,6 @@ hr {
     height: 40em;
     font-size: 9px;
   }
-
 }
 
 #spinner {
@@ -616,53 +681,8 @@ hr {
   text-align: center;
 }
 
-
-
 .footer p {
   color: #f3f3f3;
   margin: 0;
   font-size: 14px;
-}
-
-
-.audio-player {
-  display: flex;
-  align-items: center;
-}
-
-#audio-controls button {
-  background-color: transparent;
-  border: none;
-  font-size: 0;
-  cursor: pointer;
-}
-
-#playPauseBtn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: transparent;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}
-
-#playPauseBtn:hover {
-  background-color: #a49f9f66;
-}
-
-#playIcon {
-  width: 25px;
-  height: 25px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: transform 0.3s ease;
-}
-
-#playPauseBtn.playing #playIcon {
-  transform: scale(0);
 }
