@@ -71,34 +71,30 @@ function mostrarNombreUsuario(username) {
 
   var opcionesInicioSesion = document.getElementsByClassName("nav__login-buttons");
   for (var i = 0; i < opcionesInicioSesion.length; i++) {
-    opcionesInicioSesion[i].style.display = "none"; // Ocultar los botones de inicio de sesión y registro
+    opcionesInicioSesion[i].style.display = "none";
   }
 
-  navUsername.style.display = "block"; // Mostrar el elemento "nav-username"
-
+  navUsername.style.display = "block";
   var btnCerrarSesion = document.getElementsByClassName("nav__logout");
   for (var i = 0; i < btnCerrarSesion.length; i++) {
-    btnCerrarSesion[i].style.display = "block"; // Mostrar el botón de cerrar sesión en bloque
+    btnCerrarSesion[i].style.display = "block";
   }
 }
 
 function iniciarSesion() {
   var username = document.getElementById("login-username").value;
-  
+
   spinner.style.display = "block";
   contenedor.style.display = "none";
-  
+
   mostrarNombreUsuario(username);
   localStorage.setItem("username", username);
   cerrarModalLogin();
 
-  // Restablecer el formulario
   document.getElementById("login-form").reset();
 
-  // Reemplazar la URL actual sin agregar una nueva entrada en el historial
   history.replaceState({}, document.title, window.location.pathname);
-  
-  // Ocultar spinner después de un breve período de tiempo
+
   setTimeout(() => {
     spinner.style.display = "none";
     contenedor.style.display = "block";
@@ -106,29 +102,27 @@ function iniciarSesion() {
 }
 
 function cerrarSesion() {
-  localStorage.removeItem("username"); // Eliminar el nombre de usuario del almacenamiento local
-  
+  localStorage.removeItem("username");
+
   spinner.style.display = "block";
   contenedor.style.display = "none";
-  
+
   var opcionesInicioSesion = document.getElementsByClassName("nav__login-buttons");
   for (var i = 0; i < opcionesInicioSesion.length; i++) {
-    opcionesInicioSesion[i].style.display = "block"; // Mostrar los botones de inicio de sesión y registro
+    opcionesInicioSesion[i].style.display = "block";
   }
 
   var navUsername = document.getElementById("nav-username");
-  navUsername.textContent = ""; // Borrar el contenido del nombre de usuario
-  navUsername.style.display = "none"; // Ocultar el elemento "nav-username"
+  navUsername.textContent = "";
+  navUsername.style.display = "none";
 
   var btnCerrarSesion = document.getElementsByClassName("nav__logout");
   for (var i = 0; i < btnCerrarSesion.length; i++) {
-    btnCerrarSesion[i].style.display = "none"; // Ocultar el botón de cerrar sesión
+    btnCerrarSesion[i].style.display = "none";
   }
 
-  // Reemplazar la URL actual sin agregar una nueva entrada en el historial
   history.replaceState({}, document.title, window.location.pathname);
-  
-  // Ocultar spinner después de un tiempo de espera
+
   setTimeout(() => {
     spinner.style.display = "none";
     contenedor.style.display = "block";
@@ -142,7 +136,7 @@ window.addEventListener("load", function () {
   } else {
     var btnCerrarSesion = document.getElementsByClassName("nav__logout");
     for (var i = 0; i < btnCerrarSesion.length; i++) {
-      btnCerrarSesion[i].style.display = "none"; // Ocultar el botón de cerrar sesión
+      btnCerrarSesion[i].style.display = "none";
     }
   }
 });
@@ -174,7 +168,7 @@ function mostrarModalAcerca() {
   document.getElementById("modal-acerca").style.display = "block";
 
   if (typed) {
-    typed.destroy(); //Esto es para destruir una instancia antes inicializada
+    typed.destroy(); 
   }
 
   typed = new Typed(".typed", {
@@ -195,9 +189,9 @@ function cerrarModalAcerca() {
   document.getElementById("modal-acerca").style.display = "none";
 }
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    spinner.style.display = "none";
-    contenedor.style.display = "block";
-  }, 1500);
-});
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      contenedor.style.display = "block";
+    }, 800);
+  });
