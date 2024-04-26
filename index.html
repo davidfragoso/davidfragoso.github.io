@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="../images/fragosodev.png"
     />
-    <title>Inicio</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="contenedor" id="contenedor">
@@ -32,7 +32,8 @@
             </li>
 
             <li class="nav__item">
-              <span class="nav__parent">Créditos Fuentes
+              <span class="nav__parent"
+                >Créditos Fuentes
                 <img src="./images/icon-arrow-down.svg" class="nav__arrow" />
               </span>
 
@@ -41,48 +42,62 @@
                   <a
                     href="https://www.youtube.com/watch?v=PRywwDEq8qU&t=111s"
                     class="nav__link"
-                    target="_blank">AlexCG Design</a>
+                    target="_blank"
+                    >AlexCG Design</a
+                  >
                 </li>
 
                 <li class="nav__dropdown">
                   <a
                     href="https://www.youtube.com/watch?v=v5TCP1cnSQA&t=57s"
                     class="nav__link"
-                    target="_blank">CapiDev</a>
+                    target="_blank"
+                    >CapiDev</a
+                  >
                 </li>
 
                 <li class="nav__dropdown">
                   <a
                     href="https://www.youtube.com/shorts/LOSCrYq0ZB4"
                     class="nav__link"
-                    target="_blank">EasyLearnAxis</a>
+                    target="_blank"
+                    >EasyLearnAxis</a
+                  >
                 </li>
               </ul>
             </li>
 
             <li class="nav__item">
-              <a href="#" onclick="mostrarModalAcerca()" class="nav__link">Acerca de</a>
+              <a href="#" onclick="mostrarModalAcerca()" class="nav__link"
+                >Acerca de</a
+              >
             </li>
 
             <li class="nav__item">
-              <a href="#" onclick="mostrarModalContacto()" class="nav__link">Contacto</a>
+              <a href="#" onclick="mostrarModalContacto()" class="nav__link"
+                >Contacto</a
+              >
             </li>
 
             <li class="nav__login nav__login-buttons">
-              <a href="#" class="nav__sign" onclick="mostrarModalLogin()">Iniciar sesión</a>
+              <a href="#" class="nav__sign" onclick="mostrarModalLogin()"
+                >Iniciar sesión</a
+              >
             </li>
-            
+
             <li class="nav__login nav__login--border nav__login-buttons">
-              <a href="#" class="nav__sign" onclick="mostrarModalRegistro()">Registrarse</a>
+              <a href="#" class="nav__sign" onclick="mostrarModalRegistro()"
+                >Registrarse</a
+              >
             </li>
-            
+
             <li class="nav__user nav__login-buttons" id="nav-username"></li>
-            
+
             <li class="nav__user nav__logout nav__login-buttons">
-              <a href="#" class="nav__sign" onclick="cerrarSesion()">Cerrar sesión</a>
+              <a href="#" class="nav__sign" onclick="cerrarSesion()"
+                >Cerrar sesión</a
+              >
             </li>
-            
-            
           </ul>
         </div>
       </nav>
@@ -91,7 +106,9 @@
         <div class="universo">
           <section class="main__grid">
             <div class="sistema-solar">
-              <div class="sun"></div>
+              <div class="sun">
+                <div class="sun-glow"></div>
+              </div>
               <div class="earth">
                 <div class="moon"></div>
               </div>
@@ -114,21 +131,33 @@
               <!-- Modal de login -->
               <div id="modal-login" class="modal">
                 <div class="modal-content">
-                  <span class="close" onclick="cerrarModalLogin()">&times;</span>
+                  <span class="close" onclick="cerrarModalLogin()"
+                    >&times;</span
+                  >
                   <img src="../images/login.svg" alt="iniciar sesion" />
                   <div class="modal-text">
                     <form class="form" id="login-form">
                       <div class="form-group">
                         <label for="username">Usuario:</label>
-                        <input type="text" id="login-username" placeholder="Nombre de usuario" required/>
+                        <input
+                          type="text"
+                          id="login-username"
+                          placeholder="Nombre de usuario"
+                          required
+                        />
                       </div>
 
                       <div class="form-group">
                         <label for="password">Contraseña:</label>
-                        <input type="password" id="password" name="password" placeholder="*****" required>
+                        <input
+                          type="password"
+                          id="password"
+                          name="password"
+                          placeholder="*****"
+                          required
+                        />
                       </div>
                       <hr class="styled-hr" />
-
                       <button type="submit" class="btn">Iniciar sesión</button>
                     </form>
                   </div>
@@ -138,24 +167,43 @@
               <!-- Modal de registro -->
               <div id="modal-registro" class="modal">
                 <div class="modal-content">
-                  <span class="close" onclick="cerrarModalRegistro()">&times;</span>
-                  <img src="../images/register.svg" alt="registrarse"/>
+                  <span class="close" onclick="cerrarModalRegistro()"
+                    >&times;</span
+                  >
+                  <img src="../images/register.svg" alt="registrarse" />
 
                   <div class="modal-text">
                     <form class="form">
                       <div class="form-group">
                         <label for="username">Usuario:</label>
-                        <input type="text" id="username" placeholder="Nombre de usuario" required/>
+                        <input
+                          type="text"
+                          id="username"
+                          placeholder="Nombre de usuario"
+                          required
+                        />
                       </div>
 
                       <div class="form-group">
                         <label for="email">Correo:</label>
-                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="example@gmail.com"
+                          required
+                        />
                       </div>
 
                       <div class="form-group">
                         <label for="password-registro">Contraseña:</label>
-                        <input type="password" id="password-registro" name="password" placeholder="*****" required>
+                        <input
+                          type="password"
+                          id="password-registro"
+                          name="password"
+                          placeholder="*****"
+                          required
+                        />
                       </div>
                       <hr class="styled-hr" />
 
@@ -164,7 +212,6 @@
                   </div>
                 </div>
               </div>
-
 
               <!-- Modal para el botón -->
               <div id="modal" class="modal">
@@ -254,13 +301,8 @@
                   <h2>Acerca de</h2>
                   <hr />
 
-                  <div class="modal-media">
-                    <div class="profile-picture">
-                      <img
-                        src="../images/mi-foto.jpg"
-                        alt="Mi foto de perfil"
-                      />
-                    </div>
+                  <div class="profile-picture">
+                    <img src="../images/mi-foto.jpg" alt="Mi foto de perfil" />
                   </div>
                   <div class="modal-text">
                     <h3>¿Quién soy?</h3>
@@ -327,26 +369,21 @@
                             >https://www.youtube.com/watch?v=PRywwDEq8qU&t=111s</a
                           >
                         </li>
-                        <hr class="styled-hr" />
-
-                        <li>
-                          Ayuda extra: ChatGPT | Fuente:
-                          <a
-                            href="https://openai.com"
-                            >https://openai.com</a
-                          >
-                        </li>
                       </ul>
                     </div>
                     <h3>¡Aviso Importante!</h3>
                     <p>
-                      Existen funcionalidades en este proyecto que fueron proporcionados por la inteligencia 
-                      Artificial de OpenAI "ChatGPT", ejemplo de ello es el inicio de sesión en la página, que sin utilizar
-                      bases de datos se logró usando solo JavaScript y un poco de ingenio para que funcionara.
+                      Existen funcionalidades en este proyecto que fueron
+                      proporcionados por la inteligencia Artificial de OpenAI
+                      "ChatGPT", ejemplo de ello es el inicio de sesión en la
+                      página, que sin utilizar bases de datos se logró usando
+                      solo JavaScript y un poco de ingenio para que funcionara.
                     </p>
                     <p>
-                      Como aprendiz de desarrollador frontend es bueno reconocer y dar crédito del material utilizado de diversas fuentes
-                      en nuestros proyecto ya que, aunque sea de uso público, hay un creador detrás de cada proyecto.
+                      Como aprendiz de desarrollador frontend es bueno reconocer
+                      y dar crédito del material utilizado de diversas fuentes
+                      en nuestros proyecto ya que, aunque sea de uso público,
+                      hay un creador detrás de cada proyecto.
                     </p>
                   </div>
                 </div>
@@ -365,11 +402,14 @@
       </main>
       <footer class="footer">
         <div class="container">
-          <p>&copy; 2023 Fragoso. Todos los derechos reservados.</p>
+          <p>&copy; 2024 fragosodev. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>
-    <div id="spinner"></div>
+    <div id="spinner-container">
+      <div id="spinner"></div>
+    </div>
+
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="./js/menu.js"></script>
   </body>

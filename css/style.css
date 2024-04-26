@@ -194,9 +194,9 @@ hr {
   display: flex;
   background-image: linear-gradient(
       to bottom,
-      rgb(0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.626) 50%,
-      rgb(0, 0, 0) 100%
+      rgba(0, 0, 0, 0.915) 0%,
+      rgba(16, 0, 30, 0.511) 50%,
+      rgba(0, 0, 0, 0.852) 100%
     ),
     url("../images/universo.jpg");
   background-repeat: no-repeat;
@@ -230,6 +230,34 @@ hr {
   background-size: cover;
   background-position: center;
   border-radius: 50%;
+}
+
+.sun-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 221, 0, 0.8) 100%,
+    rgba(255, 221, 0, 0.37) 100%
+  ); /* Gradient para opacidad gradual */
+  background: radial-gradient(
+    circle,
+    rgba(197, 173, 17, 0.432) 30%,
+    rgba(159, 140, 17, 0.108) 60%,
+    rgba(159, 135, 17, 0) 100%
+  );
+  animation: breathing 4s infinite alternate; /* Animación de respiración */
+  border-radius: 50%;
+}
+
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.9);
+  }
 }
 
 .earth,
@@ -423,7 +451,7 @@ hr {
     margin: 0;
     padding: 0 1.5em;
   }
-  .nav__user{
+  .nav__user {
     width: max-content;
     margin: 0;
     margin-left: auto;
@@ -497,60 +525,94 @@ hr {
   height: 100%;
   overflow: auto;
   backdrop-filter: blur(4px); /* Aplica el desenfoque */
-  -webkit-backdrop-filter: blur(
-    4px
-  ); /* Compatible con navegadores basados en WebKit */
+  -webkit-backdrop-filter: blur(4px); /* Compatible con navegadores basados en WebKit */
 }
 
+/* Estilos para el contenido del modal */
 .modal-content {
-  border-radius: 5px;
-  background-color: #060606;
+  border-radius: 10px;
+  background-color: #1a1a1a; /* Color de fondo más oscuro */
   margin: 10% auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  border: 1px solid #444; /* Borde más oscuro */
+  width: 90%; /* Ajustado para que se vea bien en dispositivos móviles */
   max-width: 600px;
 }
+
+/* Estilos para la imagen de perfil dentro del modal */
 .profile-picture {
-  width: 200px; /* Ajusta el ancho y alto según tus necesidades */
-  height: 200px;
+  width: 150px; /* Reducido el tamaño para una apariencia más equilibrada */
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid #fff; /* Color blanco para los bordes */
   margin: 0 auto; /* Centra horizontalmente */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
+/* Estilos para la imagen dentro del contenedor de la imagen de perfil */
 .profile-picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+/* Estilos para el contenido del modal */
 .modal-media {
   width: 100%;
   height: 100%;
+  border: 2px solid #444; /* Agregado borde */
+  border-radius: 10px; /* Borde redondeado */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
 }
+
+/* Estilos para el texto dentro del modal */
 .modal-text {
-  color: white;
+  color: #ccc; /* Color de texto más claro */
   text-align: justify;
   padding: 10px;
 }
 
+/* Estilos para la sección de referencias dentro del modal */
 .modal-references {
-  color: white;
+  color: #ccc; /* Color de texto más claro */
   text-align: left;
-  border-radius: 5px;
-  margin: 10% auto;
-  border: 1px solid #888;
+  border-radius: 10px;
+  margin: 20px auto; /* Aumentado el margen para un espaciado adecuado */
+  border: 1px solid #444; /* Borde más oscuro */
+  padding: 15px; /* Aumentado el relleno para un aspecto más espaciado */
+  max-width: 90%; /* Ajuste del ancho máximo para evitar que sea demasiado ancho */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
 }
+
+/* Estilos para la lista de referencias dentro de la sección de referencias */
 .modal-references ul {
-  height: auto;
-  align-content: center;
-  justify-content: center;
-  overflow: auto;
+  list-style: none; /* Quitar viñetas */
+  padding: 0;
+  margin: 0; /* Quitar el margen predeterminado */
+  max-height: 150px; /* Altura máxima para el desplazamiento */
+  overflow-y: auto; /* Desplazamiento vertical si es necesario */
 }
+
+/* Estilos para los elementos de la lista de referencias */
+.modal-references li {
+  margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
+/* Estilos para el desplazamiento dentro de la lista de referencias si es necesario */
+.modal-references ul::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.modal-references ul::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color de la barra de desplazamiento */
+  border-radius: 4px; /* Borde redondeado */
+}
+
+.modal-references ul::-webkit-scrollbar-track {
+  background-color: #333; /* Color del fondo de la barra de desplazamiento */
+  border-radius: 4px; /* Borde redondeado */
+}
+
 .close {
   color: #aaa;
   float: right;
@@ -572,6 +634,7 @@ hr {
 .modal-content p {
   margin-bottom: 15px;
 }
+
 
 .form {
   margin-top: 20px;
@@ -653,17 +716,19 @@ hr {
   }
 }
 
+#spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #spinner {
-  display: block;
   width: 40px;
   height: 40px;
   border: 4px solid #f3f3f3;
   border-top: 4px solid #eed707;
   border-radius: 50%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   animation: spin 1s linear infinite;
 }
 
